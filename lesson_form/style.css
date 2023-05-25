@@ -1,0 +1,35 @@
+* {
+    margin: auto;
+}
+
+.container {
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    display: flex;
+}
+
+.left-part {
+    width: 60%;
+}
+.right-part {
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}

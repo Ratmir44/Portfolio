@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('1Vor7Y7aYS6JNyZkL');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_3q3l1xc', 'template_1a7n1qm', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-part">
+            <h1>Contact us</h1>
+            <div class="icons">
+                <div class="icon"> <a href="#">f</a></div>
+                <div class="icon"><a href="#">t</a></div>
+                <div class="icon"><a href="#">in</a></div>
+            </div>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <div>
+                    <label for="reply_to"></label>
+                    <input class="input" type="text" name="reply_to" placeholder="email">
+                </div>
+                <label for="user_name"></label>
+                <input type="text" name="user_name" placeholder="your name">
+                <select name="age" id="">
+                    <option value="a1">10</option>
+                    <option value="a2">20</option>
+                    <option value="a3">30</option>
+                </select>
+                <textarea name="message" id="message" cols="30" rows="20" placeholder="Type your message..."></textarea>
+                <div><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+        <div class="right-part">
+            <h1>Hello User!</h1>
+            <h4>If you want to know more about our project than</h4> 
+        </div> 
+    </div>
+</body>
+</html>

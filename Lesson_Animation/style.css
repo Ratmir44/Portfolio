@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+.font, .animation, .background {
+    margin: 0px 0px 40px 0px;
+  }
+  
+  .font__icons {
+      width: 50%;
+      margin: 0 0 20px 0;
+      padding: 0 0 0 30px;
+      background-color: rgb(19, 26, 53);
+      border-radius: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      transition: width 2s;
+  }
+  
+  .font__icons:hover {
+      width: 100%;
+  }
+  
+  
+  .animation__block {
+      width: 100%;
+      margin: 0 0 20px 0;
+      padding: 30px;
+      background-color: rgb(19, 26, 53);
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .block__element {
+    background-color: #ffffff;
+    height: 100px;
+    width: 100px;
+    font-size: 1px;
+    padding: 1px;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+    opacity: .7;
+    }
+    
+  @keyframes skew {
+    0% {
+      transform: skewX(20deg);
+    }
+    10%{
+        transform: skewX(15deg);
+    }
+    20%{
+        transform: skewX(10deg);
+    }
+    30%{
+        transform: skewX(5deg);
+    }
+    40%{
+        transform: skewX(0deg);
+    }
+    50%{
+        transform: skewX(-5deg);
+    }
+    60%{
+        transform: skewX(-10deg);
+    }
+    70%{
+        transform: skewX(-15deg);
+    }
+    80%{
+        transform: skewX(-17deg);
+    }
+    90%{
+        transform: skewX(-19deg);
+    }
+    100% {
+      transform: skewX(-20deg);
+    }
+  }
+
+li{
+    color: white;
+}  

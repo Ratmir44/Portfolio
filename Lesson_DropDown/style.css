@@ -1,0 +1,40 @@
+li {
+    width: 50px;
+    line-height: 30;
+}
+
+nav ul li {
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+
+    left: -50px;
+    top: 30px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+nav ul ul li{
+    position: relative;
+}
+nav ul ul ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+body{
+    background-color:black;
+}
+a{
+    color: red;
+}
